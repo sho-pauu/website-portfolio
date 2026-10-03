@@ -283,6 +283,24 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+<script>
+document.querySelectorAll('.tiles article').forEach(article => {
+    const image = article.querySelector('.image img, .resume img');
 
+    if (!image) return;
+
+    // Check whether THIS image is inside a hyperlink
+    const imageLink = image.closest('a');
+
+    // If the image is NOT inside a hyperlink
+    if (!imageLink) {
+        image.style.cursor = 'pointer';
+
+        image.addEventListener('click', function () {
+            window.open(this.src, '_blank');
+        });
+    }
+});
+</script>
 	</body>
 </html>
