@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE HTML>
 <!--
 	Phantom by HTML5 UP
@@ -284,42 +284,3 @@
 
 	</body>
 </html>
-```
-
-### What changed
-
-The important change is this:
-
-```html
-<object
-    data="pdf/chroniclecipher.pdf"
-    type="application/pdf"
-    width="100%"
-    height="800">
-```
-
-instead of:
-
-```html
-<iframe src="pdf/chroniclecipher.pdf"></iframe>
-```
-
-And there's now a **direct PDF link**:
-
-```html
-<a href="pdf/chroniclecipher.pdf" target="_blank" rel="noopener">
-    View Comic PDF
-</a>
-```
-
-So on an iPad, if Safari doesn't embed the PDF, the user can tap **View Comic PDF** and Safari should open the PDF as its own document.
-
-**You don't need to change the PDF itself** as long as this still exists relative to the HTML file:
-
-```text
-chroniclecipher.html
-pdf/
-    chroniclecipher.pdf
-```
-
-If your current desktop PDF viewer looks good, this should preserve that while giving iPad users a fallback.
